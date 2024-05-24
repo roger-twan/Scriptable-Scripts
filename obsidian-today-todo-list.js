@@ -1,6 +1,6 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
-// icon-color: deep-gray; icon-glyph: hand-peace;
+// icon-color: deep-gray; icon-glyph: layer-group;
 
 // Display today's todo list from the obsidian
 
@@ -27,11 +27,12 @@ async function renderWidget() {
       const text = stack.addText(item.text);
       stack.setPadding(3, 0, 3, 0);
       text.textOpacity = item.opacity;
-      text.font = Font.thinSystemFont(14);
+      text.font = Font.systemFont(12);
     }
   } else {
-    const text = widget.addText('<Empty>');
-    text.textColor = Color.lightGray();
+    const text = widget.addText('🐶');
+    text.font = Font.systemFont(60);
+    text.centerAlignText();
   }
 }
 
